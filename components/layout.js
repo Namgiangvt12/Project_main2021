@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Container from 'react-bootstrap/Container'
 import {MenuItems} from "./MenuItem";
+import {dai} from "./dai"
 import React, { Children } from "react";
 import { faBaby, faBars, faHome, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -25,7 +26,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
                       <meta charSet="utf-8" />
                       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                     </Head>
-                    <body className = "body">
+                    <body>
                         <nav className="NavbarItems">
                             <a className="navbar-logo" href = "#">
                               <FontAwesomeIcon  icon = {faHome} href ="/asdasd"></FontAwesomeIcon>
@@ -52,7 +53,30 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
                             </ul>
 
                         </nav>
-                        
+                        <Container>
+                          <div>
+                          {
+                                dai.map((item)=>{
+                                  return (
+                                    <li key={item.Mien.toString()}>
+                                      <a >
+                                             <h1>{item.Mien}</h1> 
+                                              {item.CacDai.map((tenDai) =>{ return ( <div key={tenDai.id.toString()}>{tenDai.name}</div>)})}
+                                      </a>
+                                      <div>
+                                      </div>
+                                    </li>
+                                  )
+                                })
+                              }
+                          </div>
+                          <div>
+                              
+                          </div>
+                          <div>
+                              
+                          </div>
+                        </Container>
                     </body>   
                     <main>{children}</main> 
               </div>

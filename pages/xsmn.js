@@ -1,6 +1,7 @@
 
 import React from "react"
 import Layout from "../components/layout"
+import Container from 'react-bootstrap/Container'
 export const getServerSideProps = async () => {
 
     const res = await fetch("https://s1.ketquaveso.com/ttkq/json_kqmn/");
@@ -15,7 +16,8 @@ var number = 1;
 const xsmn = ({xsmn}) => {
     return(
         <Layout title = "XSMN SXMN KQXSMN Kết quả xổ số miền nam chính xác nhất" >
-            <a >
+            <Container>
+            <div >
                 <table className= "table table-bordered text-center">
                     <tbody>
                         <tr>
@@ -88,7 +90,8 @@ const xsmn = ({xsmn}) => {
                 </table>
 
                 
-            </a>
+            </div>
+            </Container>
                  
         </Layout>
     )
