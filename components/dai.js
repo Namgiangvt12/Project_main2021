@@ -167,20 +167,6 @@ export const dai = [
         ]
     },
     {
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
         "Mien" : "Miền Trung",
         "CacDai" :
         [

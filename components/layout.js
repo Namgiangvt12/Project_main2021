@@ -1,23 +1,19 @@
 import Head from 'next/head'
 import Container from 'react-bootstrap/Container'
 import {MenuItems} from "./MenuItem";
-import {dai} from "./dai"
-import React, { Children } from "react";
-import { faBaby, faBars, faHome, faTimes } from "@fortawesome/free-solid-svg-icons";
+import  ReactDOM  from 'react';
+import React from "react";
+import { faBars, faHome, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
- const Layout = ({children,title = "CL xổ số - XSMN - XSMB - XSMT - Kêt quả xổ số nhanh nhất VN"}) => {
+ const Layout = ({children,title } ) => {
       function clickkk(){
-        welcome();
         setCollapseOpen(!collapseOpen)
-        welcome();
       }
-      const [collapseOpen, setCollapseOpen] = React.useState(false)      
-      function welcome() {   
-        console.log(collapseOpen);
-        }   
+      const [collapseOpen, setCollapseOpen] = React.useState(false)       
       return (
-              <div>
+        <div>
+              <body></body>
                     <Head >
 
                       <link rel = "icon"  type = "image/x-icon"/>
@@ -26,19 +22,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
                       <meta charSet="utf-8" />
                       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                     </Head>
-                    <body>
+                    <div>
                         <nav className="NavbarItems">
                             <a className="navbar-logo" href = "#">
                               <FontAwesomeIcon  icon = {faHome} href ="/asdasd"></FontAwesomeIcon>
                             </a>
                             <i className="fab fa-bars"></i>
                             <div className="menu-icon" onClick={clickkk} >
-                                <div><FontAwesomeIcon className ="faBar" icon={collapseOpen ? faTimes : faBars } /></div>
-                              
+                                <div><FontAwesomeIcon className ="faBar" icon={collapseOpen ? faTimes : faBars } /></div>                            
                             </div>
                             <ul className={collapseOpen ? "nav-menu active" : "nav-menu"}>
+                              {console.log("Load Menu")}
                               {
-                                MenuItems.map((item,index)=>{
+                                MenuItems.map((item)=>{
                                   return (
                                     <li key={item.id.toString()}>
                                       <a className={item.cNam} href={item.url}>
@@ -51,38 +47,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
                                 })
                               }
                             </ul>
-
                         </nav>
-                        <Container>
-                          <div>
-                          {
-                                dai.map((item)=>{
-                                  return (
-                                    <li key={item.Mien.toString()}>
-                                      <a >
-                                             <h1>{item.Mien}</h1> 
-                                              {item.CacDai.map((tenDai) =>{ return ( <div key={tenDai.id.toString()}>{tenDai.name}</div>)})}
-                                      </a>
-                                      <div>
-                                      </div>
-                                    </li>
-                                  )
-                                })
-                              }
-                          </div>
-                          <div>
-                              
-                          </div>
-                          <div>
-                              
-                          </div>
-                        </Container>
-                    </body>   
+                    </div>   
                     <main>{children}</main> 
-              </div>
+         </div>
+
+              
               
       )
 }
 export default Layout
-
 

@@ -1,10 +1,11 @@
 
 import React from "react"
 import Layout from "../components/layout"
+import Kqxsmn from "../components/kqxsmn"
 import Container from 'react-bootstrap/Container'
-export const getServerSideProps = async () => {
 
-    const res = await fetch("https://s1.ketquaveso.com/ttkq/json_kqmn/");
+export const getServerSideProps = async () => {
+    const res = await fetch("https://s1.ketquaveso.com/ttkq/json_kqmt/");
     const data = await res.json();
     return {
         props: {
@@ -12,90 +13,14 @@ export const getServerSideProps = async () => {
         },
     }
 }
-var number = 1;
 const xsmn = ({xsmn}) => {
     return(
+
         <Layout title = "XSMN SXMN KQXSMN Kết quả xổ số miền nam chính xác nhất" >
             <Container>
-            <div >
-                <table className= "table table-bordered text-center">
-                    <tbody>
-                        <tr>
-                            <th width="50"> Giải </th>
-                            {xsmn.map(kqxsmn => ( <th width= "25%" key={"number" + (number = number+1).toString()}  ><a href={"/"+ kqxsmn.provinceName} title={kqxsmn.provinceName}>{kqxsmn.provinceName}</a></th>))} 
-
-                        </tr>
-                        <tr>
-                            <td>G8</td>
-                            {xsmn.map(kqxsmn => ( <td className="last" key={"number" + (number = number+1).toString()}><div key = {kqxsmn.lotData}>{kqxsmn.lotData['8'][0]}</div></td>))} 
-                        </tr>
-                        <tr>
-                            <td>G7</td>
-                            {xsmn.map(kqxsmn => ( <td key={"number" + (number = number+1).toString()}><div >{kqxsmn.lotData['7'][0]}</div></td>))} 
-                        </tr>
-                        <tr>
-                            <td>G6</td>
-                            {xsmn.map(kqxsmn => ( 
-                                    <td key={"number" + (number = number+1).toString()}>
-                                        <div>{kqxsmn.lotData['6'][0]}</div>
-                                        <div>{kqxsmn.lotData['6'][1]}</div>
-                                        <div>{kqxsmn.lotData['6'][2]}</div>
-                                    </td>
-
-                            ))} 
-                        </tr>
-                        <tr>
-                            <td>G5</td>
-                            {xsmn.map(kqxsmn => ( <td key={"number" + (number = number+1).toString()}><div>{kqxsmn.lotData['5'][0]}</div></td>))} 
-                        </tr>
-                        <tr>
-                            <td>G4</td>
-                            {xsmn.map(kqxsmn => ( 
-                                    <td key={"number" + (number = number+1).toString()}>
-                                        <div>{kqxsmn.lotData['4'][0]}</div>
-                                        <div>{kqxsmn.lotData['4'][1]}</div>
-                                        <div>{kqxsmn.lotData['4'][2]}</div>
-                                        <div>{kqxsmn.lotData['4'][3]}</div>
-                                        <div>{kqxsmn.lotData['4'][4]}</div>
-                                        <div>{kqxsmn.lotData['4'][5]}</div>
-                                        <div>{kqxsmn.lotData['4'][6]}</div>
-                                    </td>
-
-                            ))} 
-                        </tr>
-                        <tr>
-                            <td>G3</td>
-                            {xsmn.map(kqxsmn => ( 
-                                    <td key={"number" + (number = number+1).toString()}>
-                                        <div>{kqxsmn.lotData['3'][0]}</div>
-                                        <div>{kqxsmn.lotData['3'][1]}</div>
-                                    </td>
-
-                            ))} 
-                        </tr>
-                        <tr>
-                            <td>G2</td>
-                            {xsmn.map(kqxsmn => ( <td key={"number" + (number = number+1).toString()}><div>{kqxsmn.lotData['2'][0]}</div></td>))} 
-                        </tr>
-                        <tr>
-                            <td>G1</td>
-                            {xsmn.map(kqxsmn => ( <td key={"number" + (number = number+1).toString()}><div>{kqxsmn.lotData['1'][0]}</div></td>))} 
-                        </tr>
-                        <tr>
-                            <td>ĐB</td>
-                            {xsmn.map(kqxsmn => ( <td key={"number" + (number = number+1).toString()}><div className="last">{kqxsmn.lotData['DB'][0]}</div></td>))} 
-                        </tr>
-                        
-                    </tbody>
-                </table>
-
-                
-            </div>
-            </Container>
-                 
+                <Kqxsmn xsmn = {xsmn}>asdasdasdasd</Kqxsmn>
+            </Container>       
         </Layout>
     )
-
 };
-
 export default xsmn;
