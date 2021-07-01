@@ -24,8 +24,13 @@
     border-color: rgb(255,255,255);
   }
 .body{
-    background-color: #e7e2e2;
-    min-width: 400px;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0 auto;
+    padding: 0;
+    background: #e1e3e4;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 .NavbarItems{
     background: #c00;
@@ -64,7 +69,7 @@
 {
     display: none;
 }
-@media screen and (max-width : 960px){
+@media screen and (max-width : 1090px){
     .NavbarItems{
         position: relative;
     }
@@ -122,6 +127,10 @@
         font-size: 1.8rem;
         cursor: pointer;
     }
+    .container, .main {
+        max-width: 1090px;
+    }
+    
 
 }
 .dai_link{
@@ -129,8 +138,8 @@
     color: rgb(0, 0, 0);
     text-decoration-line: none;
     line-height: 32px;
-    font-size: 18px;
-    padding: 2px 1rem;
+    font-size: 16px;
+    padding: 2px 0.3rem;
     font-weight: 900;
     
 }
@@ -144,31 +153,68 @@
     transition:  all 0.1s ease-out;
     color: #fff;
 }
-.side-title{
-    border-radius: 2px;
-    background: #e63939;
-    line-height: 40px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-    padding: 5px 1rem;
+.content-right li {
+    padding: 5px;
+    border-bottom: 1px dotted #f3f3f3;
 }
-.side-item{
-    box-shadow: 0 2px 6px rgb(0 0 0 / 20%);
-    background: #fff;
-    margin-bottom: 5px;
-    min-width: 240px;
-    
+.container, .main {
+    max-width: 1090px;
+    margin: 0 auto;
 }
-.layout{
-    margin-top: 20px;
-    position: relative;
-    display: grid;
-    grid-template-columns: 25% 70% 25%; 
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
 }
-@media (min-width: 1040px) {
-    .container{
-        max-width: 960px;
+.col-l,.col-right,.col-center {
+    display: block;
+}
+@media screen and (min-width : 1090px){
+    .col-l {
+        width: 220px;
+        float: left;
+        padding-right: 5px;
+    }
+    .col-center{
+        width: 565px;
+        display: inline-block;
+    }
+    .col-right {
+        width: 300px;
+        float: right;
+        margin-left: 5px;
     }
 }
-
+@media screen and (max-width : 1111px){
+    .col-l,.col-right {
+        display: none;
+    }
+}
+.content-right {
+    background-color: #fff;
+    margin-bottom: 5px;
+    display: block;
+}
+.title-r {
+    background-color: #f52727;
+    color: #fff;
+    padding: 10px 5px;
+    font-weight: 700;
+    font-size: 17px;
+    text-transform: uppercase;
+    -webkit-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+}
+.content-item-menu{
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.bullet::before {
+    background: url(https://xoso.me/css/images/bulett5.png) 0 5px no-repeat;
+    width: 10px;
+    height: 15px;
+    display: inline-block;
+    content: "";
+    vertical-align: middle;
+}

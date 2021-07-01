@@ -16,40 +16,43 @@ export const getServerSideProps = async () => {
 const xsmn = ({xsmn}) => {
     return(
         <Layout title = {"XSMN SXMN KQXSMN Kết quả xổ số miền nam chính xác nhất"} >
-            <Container className = "layout">
-            <div >
+            <section className = "content main clearfix">
+                <div className = "col-l" >
                           {
-                            
                                 dai.map((item)=>{
                                   return (
-                                    <li  className = "px-md-0 d-none d-lg-block col-lg-2" key={item.Mien.toString()}>
 
-                                        <div className="side-item">
-                                             <ul className="side-title">{item.Mien}</ul> 
-                                              {item.CacDai.map((tenDai) =>{ return ( <div key={tenDai.id.toString()}><a className="dai_link" href={ "/"+tenDai.url}>{tenDai.name}</a></div>)})}
-                                        </div>
-                                    </li>
+                                        <div  className="content-right">
+                                        <div className="title-r"key={item.Mien.toString()}>{item.Mien} </div>
+                                             <ul className="content-item-menu">
+                                              {item.CacDai.map((tenDai) =>{ return ( <li className ="bullet" key={tenDai.id.toString()}><a className="dai_link" href={ "/"+tenDai.url}>{tenDai.name}</a></li>)})}
+                                              </ul>
+                                        
+                                      </div>
+                                    
                                   )
                                 })
                               }
                           </div>
-                <div><Kqxsmn xsmn = {xsmn}>asdasd</Kqxsmn></div>
-                <div>{
-                            
-                            dai.map((item)=>{
-                              return (
-                                <li  className = "px-md-0 d-none d-lg-block col-lg-2" key={item.Mien.toString()}>
+                <div className = "col-center">
+                  <Kqxsmn xsmn = {xsmn}></Kqxsmn></div>
+                <div className = "col-right"> {
+                                dai.map((item)=>{
+                                  return (
 
-                                    <div className="side-item">
-                                         <ul className="side-title">{item.Mien}</ul> 
-                                          {item.CacDai.map((tenDai) =>{ return ( <div key={tenDai.id.toString()}><a className="dai_link" href={ "/"+tenDai.url}>{tenDai.name}</a></div>)})}
-                                    </div>
-                                </li>
-                              )
-                            })
-                          }</div>
-                    
-            </Container>       
+                                        <div  className="content-right">
+                                        <div className="title-r"key={item.Mien.toString()}>{item.Mien} </div>
+                                             <ul className="content-item-menu">
+                                              {item.CacDai.map((tenDai) =>{ return ( <li className ="bullet" key={tenDai.id.toString()}><a className="dai_link" href={ "/"+tenDai.url}>{tenDai.name}</a></li>)})}
+                                              </ul>
+                                        
+                                      </div>
+                                    
+                                  )
+                                })
+                              }
+                </div>
+            </section>       
         </Layout>
     )
 };

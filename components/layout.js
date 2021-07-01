@@ -13,7 +13,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
       const [collapseOpen, setCollapseOpen] = React.useState(false)       
       return (
         <div>
-              <body></body>
+              <body className = "body"></body>
                     <Head >
 
                       <link rel = "icon"  type = "image/x-icon"/>
@@ -25,7 +25,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
                     <div>
                         <nav className="NavbarItems">
                             <a className="navbar-logo" href = "#">
-                              <FontAwesomeIcon  icon = {faHome} href ="/asdasd"></FontAwesomeIcon>
+                              <FontAwesomeIcon  icon = {faHome} href ="/"></FontAwesomeIcon>
                             </a>
                             <i className="fab fa-bars"></i>
                             <div className="menu-icon" onClick={clickkk} >
@@ -49,6 +49,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
                             </ul>
                         </nav>
                     </div>   
+
                     <main>{children}</main> 
          </div>
 
