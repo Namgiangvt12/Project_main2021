@@ -9,8 +9,8 @@ const kqxsmn = ({xsmn}) => {
                 <table className= "table table-bordered text-center">
                     <tbody>
                         <tr>
-                            <th width="30"> Giải </th>
-                            {xsmn.map(kqxsmn => ( <th width= "25%" key={"number" + (number = number+1).toString()}  ><a href={"/"+ kqxsmn.url} title={kqxsmn.provinceName}>{kqxsmn.provinceName}</a></th>))} 
+                            <th> Giải </th>
+                            {xsmn.map(kqxsmn => ( <th key={"number" + (number = number+1).toString()}  ><a href={"/"+ kqxsmn.url} title={kqxsmn.provinceName}>{kqxsmn.provinceName}</a></th>))} 
 
                         </tr>
                         <tr>

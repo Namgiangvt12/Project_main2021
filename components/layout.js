@@ -10,7 +10,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
       function clickkk(){
         setCollapseOpen(!collapseOpen)
       }
-      const [collapseOpen, setCollapseOpen] = React.useState(false)       
+      React.useEffect(() => {
+        window.addEventListener("scroll",function(){     
+          var header = document.querySelector("header")
+          header.classList.toggle("sticky", window.scrollY >0)
+      });
+      })
+      const [collapseOpen, setCollapseOpen] = React.useState(false)    
+  
       return (
         <div>
               <body className = "body"></body>
@@ -22,7 +29,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
                       <meta charSet="utf-8" />
                       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                     </Head>
-                    <div>
+                    <header>
                         <nav className="NavbarItems">
                             <a className="navbar-logo" href = "#">
                               <FontAwesomeIcon  icon = {faHome} href ="/"></FontAwesomeIcon>
@@ -48,10 +55,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
                               }
                             </ul>
                         </nav>
-                    </div>   
-
+                    </header>   
                     <main>{children}</main> 
          </div>
+          
+
 
               
               

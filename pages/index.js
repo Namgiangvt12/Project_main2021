@@ -22,8 +22,8 @@ const xsmn = ({xsmn}) => {
                                 dai.map((item)=>{
                                   return (
 
-                                        <div  className="content-right">
-                                        <div className="title-r"key={item.Mien.toString()}>{item.Mien} </div>
+                                        <div  className="content-right" key={item.Mien.toString()}>
+                                        <div className="title-r">{item.Mien} </div>
                                              <ul className="content-item-menu">
                                               {item.CacDai.map((tenDai) =>{ return ( <li className ="bullet" key={tenDai.id.toString()}><a className="dai_link" href={ "/"+tenDai.url}>{tenDai.name}</a></li>)})}
                                               </ul>
@@ -40,8 +40,8 @@ const xsmn = ({xsmn}) => {
                                 dai.map((item)=>{
                                   return (
 
-                                        <div  className="content-right">
-                                        <div className="title-r"key={item.Mien.toString()}>{item.Mien} </div>
+                                        <div  className="content-right" key={item.Mien.toString()}>
+                                        <div className="title-r" >{item.Mien} </div>
                                              <ul className="content-item-menu">
                                               {item.CacDai.map((tenDai) =>{ return ( <li className ="bullet" key={tenDai.id.toString()}><a className="dai_link" href={ "/"+tenDai.url}>{tenDai.name}</a></li>)})}
                                               </ul>
