@@ -183,23 +183,26 @@
 }
 @media screen and (min-width : 1090px){
     .col-l {
-        width: 220px;
+        width: 14rem;
         float: left;
         padding-right: 5px;
     }
     .col-center{
-        width: 565px;
+        width: 38.125rem;
         display: inline-block;
     }
     .col-right {
-        width: 300px;
+        width: 16rem;
         float: right;
-        margin-left: 5px;
     }
 }
-@media screen and (max-width : 1111px){
+@media screen and (max-width : 1106px){
     .col-l,.col-right {
         display: none;
+    }
+    .col-center{
+        width: 100%;
+        display: inline-block;
     }
 }
 .content-right {
@@ -222,7 +225,20 @@
     margin: 0;
     padding: 0;
 }
-.bullet::before {
+.bullet1 ::before {
+    background: url(https://xoso.me/css/images/bulett5.png) 0 5px no-repeat;
+    width: 10px;
+    height: 15px;
+    display: inline-block;
+    content: "";
+    vertical-align: middle;
+}
+.bullet1::after {
+    content: url(/css/images/today.gif);
+    
+
+}
+.bullet ::before {
     background: url(https://xoso.me/css/images/bulett5.png) 0 5px no-repeat;
     width: 10px;
     height: 15px;

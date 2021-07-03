@@ -67,7 +67,7 @@ export const dai = [
         
             },
             {
-                id :"DN",
+                id :"DNai",
                 name: "Đồng Nai",
                 url:"xosodongnai"
         
@@ -85,7 +85,7 @@ export const dai = [
         
             },
             {
-                id :"BTH",
+                id :"BTh",
                 name: "Bình Thuận",
                 url:"xosobinhthuan"
         
@@ -145,7 +145,7 @@ export const dai = [
                 url:"xosothaibinh"
             },
             {
-                id :"QN",
+                id :"QNi",
                 name: "Quảng Ninh",
                 url:"xosoquangninh"
             },
@@ -177,9 +177,15 @@ export const dai = [
         
             },
             {
+                id :"KH",
+                name: "Khánh Hòa",
+                url:"xosokontum"
+        
+            },
+            {
                 id :"TTH",
-                name: "TT Huế",
-                url:"xosokhanhhoa"
+                name: "Thừa Thiến Huế",
+                url:"xosothuathienhue"
             },
             {
                 id :"PY",
@@ -187,27 +193,27 @@ export const dai = [
                 url:"xosophuyen"
             },
             {
-                id :"DL",
+                id :"DLk",
                 name: "Đắk Lắk",
                 url:"xosodaclac"
             },
             {
-                id :"QN",
+                id :"QNa",
                 name: "Quảng Nam",
                 url:"xosoquangnam"
             },
             {
-                id :"DN",
+                id :"DNa",
                 name: "Đà Nẵng",
                 url:"xosodanang"
             },
             {
-                id :"BD",
+                id :"BDi",
                 name: "Bình Định",
                 url:"xosobinhdinh"
             },
             {
-                id :"QB",
+                id :"QBi",
                 name: "Quảng Bình",
                 url:"xosoquangbinh"
             },
@@ -217,7 +223,7 @@ export const dai = [
                 url:"xosoquangtri"
             },
             {
-                id :"NTH",
+                id :"NT",
                 name: "Ninh Thuận",
                 url:"xosoninhthuan"
             },
@@ -227,12 +233,12 @@ export const dai = [
                 url:"xosogialai"
             },
             {
-                id :"QNgai",
+                id :"QNg",
                 name: "Quảng Ngãi",
                 url:"xosoquangngai"
             },
             {
-                id :"DNong",
+                id :"DNo",
                 name: "Đắk Nông",
                 url:"xosodacnong"
             }

@@ -10,7 +10,7 @@ table {
     }
 }
 .last{
-    font-weight: 900;
-    font-size: 30px;
+    font-weight: bolder;
+    font-size: 1.5rem;
     color: crimson;
 }
