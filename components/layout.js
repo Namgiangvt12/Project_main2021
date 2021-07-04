@@ -57,12 +57,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
                         </nav>
                     </header>   
                     <main>{children}</main> 
-         </div>
-          
-
-
-              
-              
+         </div>     
       )
 }
 export default Layout

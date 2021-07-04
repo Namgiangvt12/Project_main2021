@@ -18,9 +18,10 @@ const xsmn = ({xsmn}) => {
 
         <Layout title = "XSMN SXMN KQXSMN Kết quả xổ số miền nam chính xác nhất" >
             <Container>
-                <Kqxsmn xsmn = {xsmn}>asdasdasdasd</Kqxsmn>
+                <Kqxsmn xsmn = {xsmn}></Kqxsmn>
             </Container>       
         </Layout>
     )
 };
 export default xsmn;
+ 

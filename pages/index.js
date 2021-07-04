@@ -71,7 +71,6 @@ function checkDate(idDai)
 }
 
 const xsmn = ({xsmn}) => {
-    const [isXo] = React.useState(null)
     return(
         <Layout title = {"XSMN SXMN KQXSMN Kết quả xổ số miền nam chính xác nhất"} >
             <section className = "content main clearfix">
