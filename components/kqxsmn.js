@@ -8,7 +8,7 @@ const kqxsmn = ({xsmn}) => {
             <div >
                 <table className= "table table-bordered text-center">
                     <tbody>
-                        <tr>
+                        <tr className ="table_title">
                             <th> Giải </th>
                             {xsmn.map(kqxsmn => ( <th key={"number" + (number = number+1).toString()}  ><a href={"/"+ kqxsmn.url} title={kqxsmn.provinceName}>{kqxsmn.provinceName}</a></th>))} 
 
@@ -17,7 +17,7 @@ const kqxsmn = ({xsmn}) => {
                             <td>G8</td>
                             {xsmn.map(kqxsmn => ( <td className="last" key={"number" + (number = number+1).toString()}><div key = {kqxsmn.lotData}>{kqxsmn.lotData['8'][0]}</div></td>))} 
                         </tr>
-                        <tr>
+                        <tr className = "highlight">
                             <td>G7</td>
                             {xsmn.map(kqxsmn => ( <td key={"number" + (number = number+1).toString()}><div >{kqxsmn.lotData['7'][0]}</div></td>))} 
                         </tr>
@@ -32,7 +32,7 @@ const kqxsmn = ({xsmn}) => {
 
                             ))} 
                         </tr>
-                        <tr>
+                        <tr className = "highlight">
                             <td>G5</td>
                             {xsmn.map(kqxsmn => ( <td key={"number" + (number = number+1).toString()}><div>{kqxsmn.lotData['5'][0]}</div></td>))} 
                         </tr>
@@ -42,7 +42,6 @@ const kqxsmn = ({xsmn}) => {
                                     <td key={"number" + (number = number+1).toString()}>
                                         <div>{kqxsmn.lotData['4'][0]}</div>
                                         <div>{kqxsmn.lotData['4'][1]}</div>
-                                        <div>{kqxsmn.lotData['4'][2]}</div>
                                         <div>{kqxsmn.lotData['4'][3]}</div>
                                         <div>{kqxsmn.lotData['4'][4]}</div>
                                         <div>{kqxsmn.lotData['4'][5]}</div>
@@ -51,7 +50,7 @@ const kqxsmn = ({xsmn}) => {
 
                             ))} 
                         </tr>
-                        <tr>
+                        <tr className = "highlight">
                             <td>G3</td>
                             {xsmn.map(kqxsmn => ( 
                                     <td key={"number" + (number = number+1).toString()}>
@@ -65,7 +64,7 @@ const kqxsmn = ({xsmn}) => {
                             <td>G2</td>
                             {xsmn.map(kqxsmn => ( <td key={"number" + (number = number+1).toString()}><div>{kqxsmn.lotData['2'][0]}</div></td>))} 
                         </tr>
-                        <tr>
+                        <tr className = "highlight">
                             <td>G1</td>
                             {xsmn.map(kqxsmn => ( <td key={"number" + (number = number+1).toString()}><div>{kqxsmn.lotData['1'][0]}</div></td>))} 
                         </tr>
